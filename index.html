@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <script>
+      window.onload = () => {
+        const params = new URLSearchParams(window.location.search)
+        let link = 'https://blox.xyz/mumbai?'
+
+        for (const [k, v] of params) {
+          link = `${link}${k}=${v}&`
+        }
+        window.location = link.slice(0, link.length - 1)
+      }
+    </script>
+  </body>
+</html>
